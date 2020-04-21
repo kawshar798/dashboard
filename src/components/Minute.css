@@ -1,0 +1,22 @@
+
+.login {
+    padding: 14px;
+    width: 100%;
+    box-sizing: border-box;
+    display: none;
+}
+input {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+.active {
+    background: red!important;
+}
+.signup{
+    display: none;
+}
+.tab-active{
+    display: block;
+}
