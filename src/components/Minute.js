@@ -26,4 +26,8 @@ const Minute = () => {
     );
 };
 
+img.tp-kbimg {
+    height: 300px!important;
+}
+
 export default Minute;
