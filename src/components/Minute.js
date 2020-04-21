@@ -19,6 +19,8 @@ const Minute = () => {
     const [error, setError] = useState(null);
     const [selectItem,setSelectItem] = useState("login");
 
+    const [showPassword,setShowPassword] = useState(true);
+
     const handleMinus = () => {
         if (minutes > 1) {
             setMinutes(minutes - 1)
@@ -32,6 +34,9 @@ const Minute = () => {
         setMinutes(minutes + 1)
         setError(null);
     }
+
+
+
     return (
         <div>
 
@@ -61,10 +66,11 @@ const Minute = () => {
                         </CardContent>
                         <div   className={selectItem==="login"?' login tab-active':'login'}>
                         <input type="text"placeholder="Email" />
-                        <input type="password" placeholder="Password" />
-                        <Checkbox
+                        <input type={showPassword?'text':'password'} placeholder="Password" />
+
+                        <Checkbox onChange={ () => setShowPassword(!showPassword)} defaultChecked={showPassword}
                             inputProps={{ 'aria-label': 'primary checkbox' }}
-                        />
+                        />Show password
                          <Button>Login</Button>
                         </div>
 
@@ -73,9 +79,10 @@ const Minute = () => {
                         <input type="text" placeholder="Name " />
                         <input type="email" placeholder="Email"/>
                         <input type="password" placeholder="Password" />
-                        <Checkbox
+                        <Checkbox onChange={ () => setShowPassword(!showPassword)} defaultChecked={showPassword}
                             inputProps={{ 'aria-label': 'primary checkbox' }}
                         />
+                        <br/>
                          <Button>Sign Up</Button>
                         </div>
                         
