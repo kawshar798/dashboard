@@ -4,13 +4,7 @@ import Badge from '@material-ui/core/Badge';
 import AddIcon from '@material-ui/icons/Add';
 import RemoveIcon from '@material-ui/icons/Remove';
 import Card from '@material-ui/core/Card';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
-import Input from '@material-ui/core/Input';
-import Checkbox from '@material-ui/core/Checkbox';
-import Container from '@material-ui/core/Container';
-import Grid from '@material-ui/core/Grid';
-import './Minute.css'
+import './Counter.css'
 const Minute = () => {
     const [minutes, setMinutes] = useState(5);
     const [error, setError] = useState(null);
@@ -29,7 +23,7 @@ const Minute = () => {
 
 
     return (
-        <div>
+        <>
 
             {/* <div>
                 <Button onClick={() => { setMinutes(minutes <= 1 ? 1 : minutes - 1) }}>-</Button>
@@ -37,17 +31,18 @@ const Minute = () => {
                 <p> <Badge badgeContent={minutes} color="secondary">Minutes</Badge></p>
                 <Button onClick={() => setMinutes(minutes + 1)}>+</Button>
             </div> */}
-
-            <div style={{ display: 'flex', width: '100%', justifyContent: 'center', padding: '100px', boxSizing: 'border-box' }}>
-                <Button onClick={handleMinus}><RemoveIcon /></Button>
-                <Badge badgeContent={minutes} color="secondary">Minutes</Badge>
-                <Button onClick={handleAdd}><AddIcon /></Button>
-
-            </div>
-            <div><p>{error}</p></div>
-        
-
-        </div>
+           
+                <Card>
+                <h4 className="custom-padding">Simple Counter </h4>
+                <div style={{ display: 'flex', width: '100%', justifyContent: 'center', padding: '100px', boxSizing: 'border-box' }}>
+                    <Button onClick={handleMinus}><RemoveIcon /></Button>
+                    <Badge badgeContent={minutes} color="secondary"></Badge>
+                    <Button onClick={handleAdd}><AddIcon /></Button>
+                </div>
+                <div><p>{error}</p></div>
+                </Card>
+              
+        </>
     );
 };
 

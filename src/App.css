@@ -37,9 +37,14 @@
   }
 }
 
-.dark {
-  background: #00000094;
+.red {
+  background-color: #f50057;
+  padding: 50px 100px;
+    height: 100vh;
+  
 }
-.light {
-  background: #fff;
+.blue {
+  background-color: #3f51b5;
+  padding: 50px 100px;
+    height: 100vh;
 }
